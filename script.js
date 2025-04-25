@@ -18,10 +18,10 @@ function addElement(){
     result.appendChild(newelement);
 }
 
-function addUser(){
-    let newelement = document.createElement("p");
-    newelement.innerHTML = document.getElementById("username").value;
-    let result = document.getElementById("X");
-    result.appendChild(newelement);
-    document.getElementById("username").value = "";
-}
+// function addUser(){
+//     let newelement = document.createElement("p");
+//     newelement.innerHTML = document.getElementById("username").value;
+//     let result = document.getElementById("X");
+//     result.appendChild(newelement);
+//     document.getElementById("username").value = "";
+// }
