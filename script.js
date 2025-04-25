@@ -1,27 +1,17 @@
-// console.log("Hello ICQ");
-
-function changeColor(){
-    document.getElementById('Change').innerHTML="Change Now"
-    document.getElementById('A').style.color="red"
-}
-// document.getElementById('Change').addEventListener("click",changeColor)
-
-function hide(){
-    document.getElementById('Hide').innerHTML="Hide Now"
-    document.getElementById('title').style.display = "none";
-}
-
-function addElement(){
+function addUser(){
     let newelement = document.createElement("p");
-    newelement.innerHTML = "ICQ";
-    let result = document.getElementById("result");
-    result.appendChild(newelement);
+    newelement.innerHTML = document.getElementById("todo").value;
+    let result = document.getElementById("X");
+    document.getElementById("todo").value = "";
+    
+    let newbutton = document.createElement("button");
+    newbutton.innerHTML = "Delete";
+    newbutton.onclick = function() {
+        result.removeChild(newelement);
+        result.removeChild(newbutton);
+    }
+    newelement.appendChild(newbutton);
+    newbutton.style.marginLeft = "10px";
+    
+    result.appendChild(newelement); 
 }
-
-// function addUser(){
-//     let newelement = document.createElement("p");
-//     newelement.innerHTML = document.getElementById("username").value;
-//     let result = document.getElementById("X");
-//     result.appendChild(newelement);
-//     document.getElementById("username").value = "";
-// }
